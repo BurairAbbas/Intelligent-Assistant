@@ -1,2 +1,2 @@
 Speech bot
-Author: Burair Abbas
+Author: Burair Abbas s/o Hassan Abbas
