@@ -4,20 +4,20 @@ Simple speech recognize assistant which can perform some task to make your work 
 The main module covered in assistant is **Multi-threading** and **Inter-Process Communication**
 
 ## Features:
-#### Module Handle By Voice
+#### Module Handle by Voice
 * Search your query on __Google__.
 * Search your query on __Youtude__.
 * Create your file.
 * Delete your file.
 
-#### System Module Handle by Assistant To Cover Inter-Process Communication
+#### System Module Handle by Assistant to cover Inter-Process Communication
 * Open Camera
 * Open Internet Explorar
 * Camera
 * Notepad
 
-**ChatBot To Cover Multi-Threading**
-Chat can be also handle by speech recognizer.
+**ChatBot to cover Multi-Threading**  
+Chat can be also handle by speech recognizer. All the file to support chat is install on another Thread so assistant doesn't stuck at same point.
 
 
 
