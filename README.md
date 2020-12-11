@@ -19,7 +19,7 @@ The main module covered in assistant is **Multi-threading** and **Inter-Process 
 **ChatBot to cover Multi-Threading**  
 Chat can be also support by speech recognizer.
 
-## Library
+## Library:
 #### Speech Recognition
 import speech_recognition as sr  
 import webbrowser as wb  
