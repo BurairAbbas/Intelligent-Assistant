@@ -1,0 +1,1 @@
+[intelligent-Assistant]\venv\Lib\site-packages\chatterbot_corpus\data\english
