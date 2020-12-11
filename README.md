@@ -17,7 +17,7 @@ The main module covered in assistant is **Multi-threading** and **Inter-Process 
 * Notepad
 
 **ChatBot to cover Multi-Threading**  
-Chat can be also handle by speech recognizer. All the file to support chat is install on another Thread so assistant doesn't stuck at same point.
+Chat can be also support by speech recognizer.
 
 
 
