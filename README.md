@@ -33,7 +33,7 @@ import subprocess, time, os
 from chatterbot import ChatBot  
 from chatterbot.trainers import ListTrainer  
 
-#### othon text-to-speech
+#### python text-to-speech
 import pyttsx3 as pp version **2.7**.
 
 ---
