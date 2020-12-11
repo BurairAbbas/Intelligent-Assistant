@@ -1,7 +1,7 @@
 # Intelligent-Assistant
 
 Simple speech recognize assistant which can perform some task to make your work easier and simple.
-The main module covered in assistant is **Multi-threading** and **Inter-Process Communication**
+The main module covered in assistant is **Multi-threading** and **Inter-Process Communication**.
 
 ## Features:
 #### Module Handle by Voice
