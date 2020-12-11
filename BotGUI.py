@@ -88,14 +88,13 @@ def google_UC(cmd):
 
             try:
                 get = mic2.recognize_google(audio)
-                # if user say 'search', remove it when search in google
+                # if user say 'search', remove it the word 'search' while searching in google
                 if "search" in get.lower():
                     get = get.lower().replace('search', '').strip()
                 print(get)
                 wb.get().open(url + get)
             except sr.UnknownValueError:
                 error = "Sorry, i can't hear you. Please try again"
-                # showinfo("Error", error) # prompt message
                 Speak(error)
             except sr.RequestError as e:
                 error = 'Failed'.format(e)
@@ -135,8 +134,6 @@ voiceCmd.place(x=5, y=288)
 hiddenimports = ["nltk.chunk.named_entity"]
 
 def create_UC(cmd):
-    # if "create" in cmd.lower():  # when it detect create word it create file
-    #     fileName = cmd.lower().replace('create', '').replace(" ", '') + ".txt" #replacing create word
     fileName = cmd.lower().replace(" ", '') + ".txt"
     print(fileName)
     if fileName != '' and not os.path.exists(fileName):
@@ -157,10 +154,8 @@ def createfile():
             audio = mic1.listen(source)
 
         cmd = mic2.recognize_google(audio)  # convert audio into string
-        # print(mic2.recognize_google(audio))
         create_UC(cmd)
     except sr.UnknownValueError:
-        # showinfo("Error", "Sorry can't hear you. Please try again!")
         Speak("Sorry can't hear you. Please try again!")
     cfCmd.config(state=NORMAL)
 
@@ -199,13 +194,12 @@ def deletefile():
             Speak("What is your query?")
             audio = mic1.listen(source)
 
-        cmd = mic2.recognize_google(audio)  # convert audio into string
+        cmd = mic2.recognize_google(audio)
         print(mic2.recognize_google(audio))
 
         delete_UC(cmd)
     except sr.UnknownValueError:
         Speak("Sorry can't hear you. Please try again!")
-        # showinfo("Error", "Sorry can't hear you. Please try again!")
     dltbtn.config(state=NORMAL)
 
 
@@ -250,26 +244,20 @@ def open_ITC():
 
     MyFont = font.Font(size=6)  # set the size of the font in the btn text
 
-    # calImage = ImageTk.PhotoImage(Image.open(r"img/calCircle.png").resize((240, 45), Image.ANTIALIAS))
     calbtn = Button(itcWindow, text="Calculator", font=MyFont, relief='ridge', bd=4,
                     fg="white", width=15, bg="gray", command=open_Calc)
     calbtn.place(x=45, y=10)
 
-    # calderImage = ImageTk.PhotoImage(Image.open(r"img/calderCircle.png").resize((240, 45), Image.ANTIALIAS))
     calenderbtn = Button(itcWindow, text="Internet Explorar", font=MyFont, relief='ridge', bd=4,
                          fg="white", width=15, bg="gray", command=open_IE)
     calenderbtn.place(x=45, y=60)
 
-    # cameraImage = ImageTk.PhotoImage(Image.open(r"img/cameraCircle.png").resize((240, 45), Image.ANTIALIAS))
     camerabtn = Button(itcWindow, text="Camera", font=MyFont, relief='ridge', bd=4,
                        fg="white", width=15, bg="gray", command=open_Camera)
-
     camerabtn.place(x=45, y=110)
 
-    # ntpadImage = ImageTk.PhotoImage(Image.open(r"img/ntpadCircle.png").resize((), Image.ANTIALIAS))
     ntpadbtn = Button(itcWindow, text="NotePad", font=MyFont, relief='ridge', bd=4,
                       fg="white", width=15, bg="gray", command=open_Notepad)
-
     ntpadbtn.place(x=45, y=160)
 
     mainloop()
@@ -323,7 +311,7 @@ def talk_bot(usermsg, msgs):
     bot_answer = bot.get_response(usrmsg)
     msgs.insert(END, "You: " + usrmsg)
     strbotAnswer = str(bot_answer)
-    if (len(strbotAnswer) > 55):  # break the answer of bot so it remain of ListBox frame
+    if (len(strbotAnswer) > 55):  # break the answer of bot so it remain in ListBox frame
         split_strings = []
         n = 55
         for index in range(0, len(strbotAnswer), n):
@@ -407,11 +395,9 @@ def openChatBox():
     submitbtn = Button(root2, text="Speak", relief='ridge', bd=4,
                        fg="black", width=10, bg="gainsboro", font=MyFont,
                        command=lambda: verbal_text_Thread(msgBox))
-    # command=lambda: talk_bot_Thread(usermsg, msgBox)
     submitbtn.place(x=5, y=250)
 
     def enter_function(event):
-        # submitbtn.invoke()  # call the submit btn
         talk_bot_Thread(usermsg, msgBox)
 
     # when press enter it call the above func and it invoke the submit button
