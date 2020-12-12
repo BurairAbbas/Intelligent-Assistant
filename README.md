@@ -1,10 +1,10 @@
 # Intelligent-Assistant
 
-Simple speech recognize assistant which can perform some task to make your work easier and simple.
-The main module covered in assistant is **Multi-threading** and **Inter-Process Communication**.
+Simple speech recognition assistant which can perform some task to make your work easier and simple.
+The main module covered in this assistant is **Multi-threading** and **Inter-Process Communication**.
 
 ## Features:
-#### Module Handle by Voice
+#### Module Handle by Speech Recogniton
 * Search your query on __Google__.
 * Search your query on __Youtude__.
 * Create your file.
