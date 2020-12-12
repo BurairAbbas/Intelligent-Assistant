@@ -26,15 +26,6 @@ from chatterbot.trainers import ListTrainer
 # python text-to-speech
 import pyttsx3 as pp
 
-# Error solved by pip install pyttsx3==2.7
-# File "C:\ProgramData\Anaconda3\lib\site-packages\comtypes_init.py", line 329, in setattr
-# self.make_methods(value)
-# File "C:\ProgramData\Anaconda3\lib\site-packages\comtypes_init.py", line 698, in make_methods
-# prototype = WINFUNCTYPE(restype, *argtypes)
-# File "C:\ProgramData\Anaconda3\lib\ctypes_init.py", line 123, in WINFUNCTYPE
-# class WinFunctionType(_CFuncPtr):
-# TypeError: item 2 in argtypes passes a union by value, which is unsupported.
-
 engine = pp.init()
 voices = engine.getProperty('voices')
 
