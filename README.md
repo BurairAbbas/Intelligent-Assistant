@@ -1,6 +1,6 @@
 # Intelligent-Assistant
 
-Simple speech recognition assistant which can perform some task to make your work easier and simple.
+Simple speech recognition assistant which can perform some task to make your work easier and simple. Its a project of Operating System.
 The main module covered in this assistant is **Multi-threading** and **Inter-Process Communication**.
 
 ## Features:
